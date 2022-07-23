@@ -76,24 +76,34 @@ namespace Bytebank
 
 
 
-            Cliente sarah = new Cliente();
-            sarah.Nome = "Sarah Silva";
+            //Cliente sarah = new Cliente();
+            //sarah.Nome = "Sarah Silva";
 
-            ContaCorrente conta4 = new(253, "12345-x");
-            conta4.Saldo = 50;
-            conta4.Titular = sarah;
+            //ContaCorrente conta4 = new(253, "12345-x");
+            //conta4.Saldo = 50;
+            //conta4.Titular = sarah;
+
+
+            //Console.WriteLine(conta4.Titular.Nome);
+            //Console.WriteLine(conta4.Saldo);
+            //Console.WriteLine(conta4.NumeroAgencia);
+            //Console.WriteLine(conta4.Conta);
+
+
+            ContaCorrente conta0 = new("Leonardo", "Agencia Delta", 15, "15040-x");
+            ContaCorrente conta1 = new("Pedro", "Agencia PI", 25, "14600-x");
             
 
-            Console.WriteLine(conta4.Titular.Nome);
-            Console.WriteLine(conta4.Saldo);
-            Console.WriteLine(conta4.NumeroAgencia);
-            Console.WriteLine(conta4.Conta);
+
+            Console.WriteLine(ContaCorrente.TotalDeContasCriadas);
+
+            Cliente cliente0 = new("Leonardo", "1252533365");
+            Cliente cliente1 = new("Padro", "36547131616");
+            Cliente cliente2 = new("Paulo", "12555556900");
 
 
+            Console.WriteLine(Cliente.TotalDeClientesCriados);
             
-
-      
-             
             Console.ReadKey();
             
         }

@@ -6,7 +6,7 @@ namespace Bytebank
     {
 
 
-        public Cliente Titular { get; set; }
+        public string Titular { get; set; }
 
         private string _conta;
         public string Conta
@@ -102,11 +102,16 @@ namespace Bytebank
 
         }
 
-        public ContaCorrente(int numeroAgencia, string conta)
+        public ContaCorrente(string titular, string nomeAgencia, int numeroAgencia, string conta)
         {
+            Titular = titular;
+            NomeAgencia = nomeAgencia;
             NumeroAgencia = numeroAgencia;
             Conta = conta;
+            TotalDeContasCriadas += 1;
         }
+
+        public static int TotalDeContasCriadas { get; set; }
         
         //public void SetSaldo(double valor)
         //{
